@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.*;
 @CrossOrigin("*")
 public class UserController {
 
+    private String mail = "hatim@mail.com";
+
     @Autowired
     UserServices userServices;
 
@@ -22,5 +24,10 @@ public class UserController {
         User testuser= new User();
         testuser.setEmail("hatim");
         return testuser;
+    }
+
+    public boolean isCorrectLogin(String mail){
+        return this.mail.equals(mail);
+
     }
 }
