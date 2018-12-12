@@ -26,6 +26,8 @@ public class ShopsBackendApplicationTests {
     public void isCorrectLogin() {
         assertTrue( userController.isCorrectLogin("hatim@mail.com"));
         assertFalse( userController.isCorrectLogin("sth"));
+        assertFalse( userController.isCorrectLogin("sthelse"));
+        assertFalse( userController.isCorrectLogin("sthelse@mail.com"));
     }
 
 }
