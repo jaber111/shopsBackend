@@ -4,6 +4,9 @@ jdk:
 cache:
   directories:
   - "$HOME/.cache"
+  
+before_install:
+  - chmod +x mvnw
 
 deploy:
   provider: script
