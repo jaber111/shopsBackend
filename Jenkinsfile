@@ -11,11 +11,7 @@ pipeline {
                  bat 'mvn compiler:compile'
             bat 'mvn install'
             }
-            post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml' 
-                }
-            }
+            
         }     
 }
     }
