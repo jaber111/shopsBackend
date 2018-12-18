@@ -1,16 +1,5 @@
 language: java
-jdk:
-  - oraclejdk8
-cache:
-  directories:
-  - "$HOME/.cache"
-  
-before_install:
-  - chmod +x mvnw
-
-deploy:
-  provider: script
-  script: "mvn install && mvn deploy"
-  skip_cleanup: true
-  on:
-    tags: true
+jdk: oraclejdk8
+ 
+script:
+- ./mvnw clean install -B
